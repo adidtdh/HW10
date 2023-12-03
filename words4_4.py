@@ -1,21 +1,22 @@
 import string
 
-reps = 2
-words = 2
+wordDick = {}
+
 def checkEssentiallySame(word):
-    repsWord = 0
-    
+    wordDick.clear()
     for c in word:
-        if word.count(c) == 2:
-            repsWord += 1
+        wordDick[c] = wordDick.get(c,0) +1
+        
+    return len([i for i in wordDick.values() if i == 2]) == 2
     
-    return repsWord == 4
+    
+        
+    
 
 
 lets = string.ascii_uppercase
 counter = 0
 
-exit
 
 for i1 in lets:
     for i2 in lets:
